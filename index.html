@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORGANIZADOR</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+        <h3 style="margin-top: 20px; margin-bottom: 20px;">LISTA ORGANIZADORA</h3>
+        <div>
+            <span>1</span>
+            <input type="text" placeholder="palavra" id="word1">
+            <br>
+            <span>2</span>
+            <input type="text" placeholder="palavra" id="word2">
+            <br>
+            <span>3</span>
+            <input type="text" placeholder="palavra" id="word3">
+            <br>
+            <span>4</span>
+            <input type="text" placeholder="palavra" id="word4">
+        </div>
+        <button onclick="submit()" id="submitButton">Enviar</button>
+        <div id="displayNameWithComas" style="font-weight: bold;"></div>
+        <hr>
+        <div id="displaynamewithoutComas"></div>
+        <button onclick="sorting()" id="sortButton">Organizar</button>
+    </center>
+    <script>
+        wordArray=[];
+        function submit() {
+            var displayarray = [];
+
+            for (var j = 1; j<= 4; j++)
+            {
+                var names = document.getElementById("word"+j).value;
+                console.log(names);
+                wordArray.push(names);
+            }
+
+            console.log(wordArray);
+
+            var lenghtOfNames = wordArray.length;
+            console.log(lenghtOfNames);
+
+            for (var k = 0; k < lenghtOfNames; k++);
+            {
+                displayarray.push("<h4>NAME - "+ wordArray[k] + "</h4>");
+                console.log(displayarray);
+            }
+
+            document.getElementById("displayNameWithComas").innerHTML = displayarray;
+
+            var removeComas = displayarray.join(" ");
+            console.log(removeComas);
+            document.getElementById("displaynamewithoutComas").innerHTML = removeComas;
+
+
+            document.getElementById("submitButton").style.display="none";
+            document.getElementById("sortButton").style.display="inline-block"
+        }
+        function sorting() {
+            wordArray.sort();
+
+            var displaySorting = [];
+
+            var lenghtArray = wordArray.lenght;
+
+            for (var k = 0; k < lenghtArray; k++)
+            {
+                displaySorting.push("<h4>NAME - "+ wordArray[k] + "</h4>");
+            }
+
+            var removeComas = displaySorting.join(" ");
+            document.getElementById("displaynamewithoutComas").innerHTML=removeComas;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--welcome to the privada-->
